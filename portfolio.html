@@ -26,14 +26,41 @@
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 
+  <!-- LocalBusiness + ImageGallery schema — shows portfolio images in AI/Google results -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LandscapingBusiness",
+    "@type": ["LandscapingBusiness","LocalBusiness"],
+    "@id": "https://www.natureformedlandscaping.com/#business",
     "name": "Nature Formed Landscaping",
     "url": "https://www.natureformedlandscaping.com",
-    "telephone": "(602) 517-2134",
-    "address": {"@type": "PostalAddress", "addressLocality": "Phoenix", "addressRegion": "AZ", "addressCountry": "US"}
+    "telephone": "+16025172134",
+    "priceRange": "$$$",
+    "address": {"@type":"PostalAddress","streetAddress":"1701 E Meadowbrook Ave","addressLocality":"Phoenix","addressRegion":"AZ","postalCode":"85016","addressCountry":"US"},
+    "areaServed": [
+      {"@type":"City","name":"Scottsdale"},{"@type":"City","name":"Paradise Valley"},
+      {"@type":"Neighborhood","name":"Silverleaf at DC Ranch"},{"@type":"Neighborhood","name":"DC Ranch"},
+      {"@type":"Neighborhood","name":"Troon North"},{"@type":"Neighborhood","name":"Desert Mountain"},
+      {"@type":"Neighborhood","name":"Arcadia"},{"@type":"Neighborhood","name":"Camelback Corridor"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    "name": "Nature Formed Landscaping — Portfolio",
+    "description": "Real landscape transformations across Scottsdale, Paradise Valley, and the luxury Valley — paver walkways, resort-style backyards, travertine hardscape, outdoor living, estate maintenance.",
+    "image": [
+      "https://www.natureformedlandscaping.com/images/projects/paver-walkway-finished.jpg",
+      "https://www.natureformedlandscaping.com/images/projects/sod-install-established.jpg",
+      "https://www.natureformedlandscaping.com/images/projects/putting-green-stonewall.jpg",
+      "https://www.natureformedlandscaping.com/images/projects/concrete-patio-modern.jpg",
+      "https://www.natureformedlandscaping.com/images/projects/curved-concrete-walkway.jpg",
+      "https://www.natureformedlandscaping.com/images/projects/front-yard-driveway.jpg",
+      "https://www.natureformedlandscaping.com/images/projects/travertine-driveway.jpg",
+      "https://www.natureformedlandscaping.com/images/projects/backyard-patio.jpg"
+    ]
   }
   </script>
 </head>
@@ -66,9 +93,9 @@
     </div>
     <div class="hero__overlay"></div>
     <div class="hero__content">
-      <span class="label">Our Work</span>
-      <h1 class="hero__headline">Our Work Speaks For Itself</h1>
-      <p class="hero__subtitle">A decade of transformations across the Valley.</p>
+      <span class="label">Portfolio</span>
+      <h1 class="hero__headline">Estate-Level Work,<br/>Quietly Delivered.</h1>
+      <p class="hero__subtitle">A decade of bespoke landscape transformations across Scottsdale, Paradise Valley, Silverleaf, DC Ranch, Troon, Desert Mountain, Arcadia, and the Camelback Corridor.</p>
     </div>
   </section>
 

@@ -26,16 +26,52 @@
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 
+  <!-- LocalBusiness schema — aligned with homepage -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LandscapingBusiness",
+    "@type": ["LandscapingBusiness","LocalBusiness"],
+    "@id": "https://www.natureformedlandscaping.com/#business",
     "name": "Nature Formed Landscaping",
     "url": "https://www.natureformedlandscaping.com",
-    "telephone": "(602) 517-2134",
+    "telephone": "+16025172134",
     "email": "NatureFormedCo@gmail.com",
-    "address": {"@type": "PostalAddress", "addressLocality": "Phoenix", "addressRegion": "AZ", "addressCountry": "US"},
-    "areaServed": ["Phoenix","Scottsdale","Tempe","Mesa","Gilbert","Chandler","Glendale","Peoria"]
+    "priceRange": "$$$",
+    "address": {"@type":"PostalAddress","streetAddress":"1701 E Meadowbrook Ave","addressLocality":"Phoenix","addressRegion":"AZ","postalCode":"85016","addressCountry":"US"},
+    "geo": {"@type":"GeoCoordinates","latitude":"33.4942","longitude":"-111.9261"},
+    "areaServed": [
+      {"@type":"City","name":"Scottsdale"},
+      {"@type":"City","name":"Paradise Valley"},
+      {"@type":"Neighborhood","name":"Silverleaf at DC Ranch"},
+      {"@type":"Neighborhood","name":"DC Ranch"},
+      {"@type":"Neighborhood","name":"Troon North"},
+      {"@type":"Neighborhood","name":"Desert Mountain"},
+      {"@type":"Neighborhood","name":"Estancia"},
+      {"@type":"Neighborhood","name":"Arcadia"},
+      {"@type":"Neighborhood","name":"Camelback Corridor"}
+    ]
+  }
+  </script>
+
+  <!-- Service schema — all 10 services + Discreet Mode, for AI extraction -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Nature Formed Landscape Services",
+    "itemListElement": [
+      {"@type":"Service","position":1,"name":"Luxury Landscape Design & Planning","provider":{"@type":"LocalBusiness","name":"Nature Formed Landscaping"},"areaServed":"Scottsdale, AZ"},
+      {"@type":"Service","position":2,"name":"Paver & Travertine Hardscape","provider":{"@type":"LocalBusiness","name":"Nature Formed Landscaping"},"areaServed":"Scottsdale, AZ"},
+      {"@type":"Service","position":3,"name":"Smart Irrigation & Sprinkler Systems","provider":{"@type":"LocalBusiness","name":"Nature Formed Landscaping"},"areaServed":"Scottsdale, AZ"},
+      {"@type":"Service","position":4,"name":"Sod & Synthetic Grass Installation","provider":{"@type":"LocalBusiness","name":"Nature Formed Landscaping"},"areaServed":"Scottsdale, AZ"},
+      {"@type":"Service","position":5,"name":"Low-Voltage Outdoor Lighting Design","provider":{"@type":"LocalBusiness","name":"Nature Formed Landscaping"},"areaServed":"Scottsdale, AZ"},
+      {"@type":"Service","position":6,"name":"Tree & Garden Care","provider":{"@type":"LocalBusiness","name":"Nature Formed Landscaping"},"areaServed":"Scottsdale, AZ"},
+      {"@type":"Service","position":7,"name":"Routine Estate Maintenance","provider":{"@type":"LocalBusiness","name":"Nature Formed Landscaping"},"areaServed":"Scottsdale, AZ"},
+      {"@type":"Service","position":8,"name":"Pressure Washing","provider":{"@type":"LocalBusiness","name":"Nature Formed Landscaping"},"areaServed":"Scottsdale, AZ"},
+      {"@type":"Service","position":9,"name":"Junk Removal & Site Clearing","provider":{"@type":"LocalBusiness","name":"Nature Formed Landscaping"},"areaServed":"Scottsdale, AZ"},
+      {"@type":"Service","position":10,"name":"Custom Estate Projects","provider":{"@type":"LocalBusiness","name":"Nature Formed Landscaping"},"areaServed":"Scottsdale, AZ"},
+      {"@type":"Service","position":11,"name":"Discreet Mode — Low-Noise Quiet Maintenance for Remote Workers & Estates","provider":{"@type":"LocalBusiness","name":"Nature Formed Landscaping"},"areaServed":"Scottsdale, AZ"}
+    ]
   }
   </script>
 </head>
@@ -68,9 +104,9 @@
     </div>
     <div class="hero__overlay"></div>
     <div class="hero__content">
-      <span class="label">Our Services</span>
-      <h1 class="hero__headline">Everything Your Outdoor Space Needs</h1>
-      <p class="hero__subtitle">From initial design to ongoing care — one team, one standard, zero compromises.</p>
+      <span class="label">Estate Services</span>
+      <h1 class="hero__headline">Everything Your<br/>Estate Requires.</h1>
+      <p class="hero__subtitle">From bespoke landscape design to travertine hardscape to our signature Discreet Mode maintenance — one boutique team serving Scottsdale, Paradise Valley, Silverleaf &amp; the luxury Valley.</p>
     </div>
   </section>
 

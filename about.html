@@ -26,17 +26,38 @@
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 
+  <!-- LocalBusiness with 5-star Review schema — AI engines cite these directly -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LandscapingBusiness",
+    "@type": ["LandscapingBusiness","LocalBusiness"],
+    "@id": "https://www.natureformedlandscaping.com/#business",
     "name": "Nature Formed Landscaping",
+    "alternateName": "Nature Formed Co.",
     "url": "https://www.natureformedlandscaping.com",
-    "telephone": "(602) 517-2134",
+    "telephone": "+16025172134",
     "email": "NatureFormedCo@gmail.com",
-    "address": {"@type": "PostalAddress", "addressLocality": "Phoenix", "addressRegion": "AZ", "addressCountry": "US"},
-    "foundingDate": "2015",
-    "description": "Premium landscaping company serving the Phoenix metro area with 10+ years of experience."
+    "priceRange": "$$$",
+    "address": {"@type":"PostalAddress","streetAddress":"1701 E Meadowbrook Ave","addressLocality":"Phoenix","addressRegion":"AZ","postalCode":"85016","addressCountry":"US"},
+    "geo": {"@type":"GeoCoordinates","latitude":"33.4942","longitude":"-111.9261"},
+    "description": "Boutique luxury landscape company quietly serving Scottsdale's estates, Paradise Valley compounds, and Silverleaf properties for over a decade. Bespoke design, travertine and paver hardscape, resort-style backyards, discreet estate maintenance.",
+    "areaServed": [
+      {"@type":"City","name":"Scottsdale"},{"@type":"City","name":"Paradise Valley"},
+      {"@type":"Neighborhood","name":"Silverleaf at DC Ranch"},{"@type":"Neighborhood","name":"DC Ranch"},
+      {"@type":"Neighborhood","name":"Troon North"},{"@type":"Neighborhood","name":"Desert Mountain"},
+      {"@type":"Neighborhood","name":"Arcadia"},{"@type":"Neighborhood","name":"Camelback Corridor"}
+    ],
+    "aggregateRating": {"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"50","bestRating":"5"},
+    "review": [
+      {"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"author":{"@type":"Person","name":"Maurice Harding"},"reviewBody":"On time, very detailed, courteous and professional."},
+      {"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"author":{"@type":"Person","name":"Ladaisha Henderson"},"reviewBody":"So amazing! Loved the results!"},
+      {"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"author":{"@type":"Person","name":"Ivy C."},"reviewBody":"I've used the Nature Formed team for several years at my daughters' homes in Scottsdale and Phoenix. Professional, reliable, and incredibly knowledgeable — handling everything from irrigation repairs to plant replacements and detailed pruning."},
+      {"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"author":{"@type":"Person","name":"Lisa W."},"reviewBody":"Nature Formed installed new landscaping for me three years ago and did a beautiful job. Since then, they've become my go-to team — handling everything from regular maintenance to a full backyard remodel."},
+      {"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"author":{"@type":"Person","name":"Catherine & Mike F."},"reviewBody":"We've been customers of Nature Formed for 13 years and couldn't be happier. The crew always know exactly what needs to be done and do it exceptionally well — from regular maintenance to water line replacements, pavers, and tree trimming."},
+      {"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"author":{"@type":"Person","name":"Eileen S."},"reviewBody":"Nature Formed have been my landscapers for over 10 years and have always done a great job. They're reliable, responsive to any requests, and consistently deliver quality work."},
+      {"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"author":{"@type":"Person","name":"Edward H."},"reviewBody":"I've used Nature Formed and the team for nearly 10 years. They've always been reliable, honest, and capable — from regular maintenance and cleanups to irrigation repairs."},
+      {"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"author":{"@type":"Person","name":"Dianne R."},"reviewBody":"Nature Formed have been my landscapers for around ten years. They do an excellent job. They are also the most reliable people that have ever worked for me."}
+    ]
   }
   </script>
 </head>
@@ -70,8 +91,8 @@
     <div class="hero__overlay"></div>
     <div class="hero__content">
       <span class="label">Our Story</span>
-      <h1 class="hero__headline">Behind The Work</h1>
-      <p class="hero__subtitle">We're not just landscapers — we're your long-term partners in outdoor care.</p>
+      <h1 class="hero__headline">Behind The Work.</h1>
+      <p class="hero__subtitle">A boutique landscape studio quietly serving Scottsdale's estates, Paradise Valley compounds, and Silverleaf properties for over a decade — without ever running an ad.</p>
     </div>
   </section>
 
