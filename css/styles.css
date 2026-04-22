@@ -2202,6 +2202,140 @@ section.section--warm { background: var(--warm-white); }
   color: var(--stone);
 }
 
+/* ---------- CONTACT PAGE — new simplified layout ---------- */
+.reach-row {
+  background: var(--warm-white);
+  padding: clamp(40px, 5vw, 60px) var(--section-padding-x);
+  border-bottom: 1px solid var(--sand);
+}
+.reach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.reach-card {
+  display: block;
+  background: var(--cream);
+  border: 1px solid var(--sand);
+  border-left: 3px solid var(--gold);
+  padding: 1.5rem 1.75rem;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  text-decoration: none;
+  transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.reach-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px -30px rgba(13,40,24,0.3);
+  border-left-color: var(--forest);
+}
+.reach-card__label {
+  font-size: 0.6875rem;
+  color: var(--sage);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 0.65rem;
+}
+.reach-card__value {
+  font-family: "Lora", Georgia, serif;
+  font-size: 1.25rem;
+  color: var(--charcoal);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.35rem;
+  word-break: break-word;
+}
+.reach-card__sub {
+  color: var(--stone);
+  font-size: 0.85rem;
+}
+
+.booking-main {
+  background: var(--cream);
+  padding: clamp(60px, 8vw, 100px) var(--section-padding-x);
+}
+.booking-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3rem;
+}
+.booking-header h2 {
+  font-family: "Lora", Georgia, serif;
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+}
+.booking-header p {
+  color: var(--stone);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+.booking-frame {
+  background: var(--warm-white);
+  border: 1px solid var(--sand);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 30px 60px -40px rgba(13,40,24,0.25);
+  min-height: 820px;
+}
+.booking-fallback {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+.booking-fallback p {
+  color: var(--stone);
+  font-size: 0.875rem;
+  margin-top: 0.75rem;
+  font-style: italic;
+}
+
+.detail-row {
+  background: var(--warm-white);
+  padding: clamp(60px, 8vw, 100px) var(--section-padding-x);
+  border-top: 1px solid var(--sand);
+}
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.detail-card {
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--gold);
+}
+.detail-card__label {
+  font-size: 0.6875rem;
+  color: var(--gold);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.detail-card__value {
+  font-family: "Lora", Georgia, serif;
+  font-size: 1.25rem;
+  color: var(--charcoal);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.75rem;
+}
+.detail-card__sub {
+  color: var(--stone);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 768px) {
+  .reach-grid, .detail-grid { grid-template-columns: 1fr; }
+}
+
 /* Map placeholder */
 .map-section {
   position: relative;

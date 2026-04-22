@@ -138,8 +138,7 @@
         <p>Pick a time that works for you. We'll visit your property, walk through your vision, and follow up with a detailed proposal — no pressure.</p>
       </div>
 
-      <!-- ACUITY SCHEDULING EMBED -->
-      <!-- Replace src with Nature Formed's real Acuity link from: Acuity → Client's Scheduling Page → Direct Link -->
+      <!-- ACUITY SCHEDULING EMBED + fallback open-in-new-tab button -->
       <div class="booking__frame-wrap">
         <iframe
           class="booking__iframe"
@@ -148,9 +147,20 @@
           width="100%"
           height="800"
           frameborder="0"
-          loading="lazy"></iframe>
+          loading="lazy"
+          allow="payment"></iframe>
       </div>
       <script src="https://embed.acuityscheduling.com/js/embed.js" async></script>
+
+      <!-- Always-visible fallback: opens Acuity in a full-screen new tab -->
+      <div style="text-align:center; margin-top:1.5rem;">
+        <a href="https://NatureFormedLandscaping.as.me/" target="_blank" rel="noopener" class="btn btn--dark">
+          Open Full Scheduler ↗
+        </a>
+        <p style="color:var(--stone); font-size:0.875rem; margin-top:0.75rem; font-style:italic;">
+          Scheduler not loading? Click above to open it in a new tab.
+        </p>
+      </div>
 
       <div class="booking__altways">
         <div class="booking__altway">
