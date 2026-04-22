@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Consultation | Scottsdale Landscape Appointments | Nature Formed</title>
+  <meta name="description" content="Book a landscape consultation with Nature Formed — Scottsdale's boutique landscaping company. Pick a time that works for you, we'll visit your property and walk through your vision." />
+  <meta name="keywords" content="book landscaping consultation scottsdale, schedule landscape appointment, nature formed appointments" />
+  <meta name="geo.region" content="US-AZ" />
+  <meta name="geo.placename" content="Scottsdale" />
+  <link rel="canonical" href="https://www.natureformedlandscaping.com/appointments.html" />
+
+  <meta property="og:title" content="Book a Consultation | Nature Formed" />
+  <meta property="og:description" content="Schedule a private walk-through with our Scottsdale landscape team." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.natureformedlandscaping.com/images/og-image.jpg" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0D2818" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <style>
+    .booking {
+      padding: clamp(40px, 6vw, 80px) var(--section-padding-x) clamp(80px, 10vw, 140px);
+      background: var(--cream);
+    }
+    .booking__inner { max-width: 1000px; margin: 0 auto; }
+    .booking__header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 3rem;
+    }
+    .booking__header h1 {
+      font-family: "Lora", Georgia, serif;
+      font-size: clamp(2.25rem, 5vw, 3.75rem);
+      font-weight: 500;
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin-bottom: 1.25rem;
+      color: var(--charcoal);
+    }
+    .booking__header h1 em { font-style: italic; color: var(--forest); }
+    .booking__header p {
+      color: var(--stone);
+      font-size: 1.15rem;
+      line-height: 1.6;
+    }
+    .booking__frame-wrap {
+      background: var(--warm-white);
+      border: 1px solid var(--sand);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: 0 30px 60px -40px rgba(13,40,24,0.25);
+      min-height: 800px;
+    }
+    .booking__iframe {
+      width: 100%;
+      min-height: 800px;
+      border: 0;
+      display: block;
+    }
+    .booking__fallback {
+      padding: 4rem 2rem;
+      text-align: center;
+      color: var(--stone);
+    }
+    .booking__fallback h3 {
+      color: var(--charcoal);
+      margin-bottom: 1rem;
+    }
+    .booking__altways {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .booking__altway {
+      padding: 1.75rem;
+      background: var(--warm-white);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 var(--border-radius) var(--border-radius) 0;
+      text-align: left;
+    }
+    .booking__altway-label {
+      font-size: 0.6875rem;
+      color: var(--sage);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+    .booking__altway-value {
+      font-family: "Lora", Georgia, serif;
+      font-size: 1.35rem;
+      color: var(--charcoal);
+      font-weight: 500;
+      margin-bottom: 0.35rem;
+    }
+    .booking__altway-value a { color: inherit; border-bottom: 1px solid transparent; transition: border-color .3s; }
+    .booking__altway-value a:hover { border-bottom-color: var(--gold); }
+    .booking__altway-sub { font-size: 0.875rem; color: var(--stone); }
+    @media (max-width: 768px) {
+      .booking__altways { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== NAV ========== -->
+  <header class="nav is-light" role="banner">
+    <a href="index.html" class="nav__brand" aria-label="Nature Formed Landscaping home">
+      <span class="nav__logo">NF<img src="images/logos/nf-monogram-white.png" alt="Nature Formed logo" onerror="this.remove()" /></span>
+      <span class="nav__wordmark">Nature Formed</span>
+    </a>
+    <nav class="nav__menu" role="navigation" aria-label="Primary">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="services.html" class="nav__link">Services</a>
+      <a href="portfolio.html" class="nav__link">Portfolio</a>
+      <a href="about.html" class="nav__link">About</a>
+      <a href="appointments.html" class="nav__link">Book</a>
+      <a href="contact.html" class="nav__link">Contact</a>
+      <a href="appointments.html" class="nav__cta">Get a Quote</a>
+    </nav>
+    <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ========== BOOKING ========== -->
+  <main class="booking" style="padding-top: 140px;">
+    <div class="booking__inner">
+      <div class="booking__header">
+        <span class="label">— Private Consultation</span>
+        <h1>Book a Walk-Through,<br/><em>On Your Schedule.</em></h1>
+        <p>Pick a time that works for you. We'll visit your property, walk through your vision, and follow up with a detailed proposal — no pressure.</p>
+      </div>
+
+      <!-- ACUITY SCHEDULING EMBED -->
+      <!-- Replace src with Nature Formed's real Acuity link from: Acuity → Client's Scheduling Page → Direct Link -->
+      <div class="booking__frame-wrap">
+        <iframe
+          class="booking__iframe"
+          src="https://app.acuityscheduling.com/schedule.php?owner=NATUREFORMED_OWNER_ID_HERE"
+          title="Schedule with Nature Formed Landscaping"
+          width="100%"
+          height="800"
+          frameborder="0"
+          loading="lazy"></iframe>
+      </div>
+      <script src="https://embed.acuityscheduling.com/js/embed.js" async></script>
+
+      <div class="booking__altways">
+        <div class="booking__altway">
+          <div class="booking__altway-label">Call</div>
+          <div class="booking__altway-value"><a href="tel:+16025172134">(602) 517-2134</a></div>
+          <div class="booking__altway-sub">Mon–Sat · 9 AM – 5 PM</div>
+        </div>
+        <div class="booking__altway">
+          <div class="booking__altway-label">Text</div>
+          <div class="booking__altway-value"><a href="sms:+16025172134">Text us a photo</a></div>
+          <div class="booking__altway-sub">Share what you're thinking</div>
+        </div>
+        <div class="booking__altway">
+          <div class="booking__altway-label">Email</div>
+          <div class="booking__altway-value"><a href="mailto:NatureFormedCo@gmail.com">NatureFormedCo@gmail.com</a></div>
+          <div class="booking__altway-sub">Reply within 24 hours</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__brand-row">
+          <span class="nav__logo">NF<img src="images/logos/nf-monogram-white.png" alt="Nature Formed logo" onerror="this.remove()" /></span>
+          <span class="footer__wordmark">Nature Formed</span>
+        </div>
+        <div class="footer__tagline">Formed By Nature. Refined By Us.</div>
+        <p class="footer__mission">Scottsdale's boutique landscape company. Building outdoor spaces that reflect a refined standard — one yard at a time, for over a decade.</p>
+      </div>
+      <div>
+        <div class="footer__title">Quick Links</div>
+        <ul class="footer__list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="appointments.html">Book a Consultation</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__title">Service Areas</div>
+        <ul class="footer__list">
+          <li>Scottsdale</li><li>Paradise Valley</li><li>Arcadia</li><li>Silverleaf</li>
+          <li>Phoenix</li><li>Tempe</li><li>Gilbert</li><li>Mesa</li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__title">Contact</div>
+        <div class="footer__contact">
+          <div class="footer__contact-item"><strong>Phone</strong><a href="tel:+16025172134">(602) 517-2134</a><br/><a href="tel:+16232197121">(623) 219-7121</a></div>
+          <div class="footer__contact-item"><strong>Address</strong><span style="color:rgba(255,255,255,0.7);">1701 E Meadowbrook Ave<br/>Phoenix, AZ 85016</span></div>
+          <div class="footer__contact-item"><strong>Email</strong><a href="mailto:NatureFormedCo@gmail.com">NatureFormedCo@gmail.com</a></div>
+          <div class="footer__contact-item"><strong>Hours</strong>Mon – Sat: 9 AM – 5 PM<br/>Sunday: Closed</div>
+          <div class="footer__contact-item"><strong>Follow</strong><a href="https://www.instagram.com/natureformed_" target="_blank" rel="noopener">@natureformed_</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div>© <span id="year">2026</span> Nature Formed Landscaping Co. All Rights Reserved.</div>
+      <div>ROC# [to be added]</div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="js/main.js"></script>
+</body>
+</html>

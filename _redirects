@@ -1,5 +1,8 @@
-/home              /              301
-/services          /services.html  301
-/portfolio         /portfolio.html 301
-/about             /about.html     301
-/contact           /contact.html   301
+/home              /                    301
+/services          /services.html       301
+/portfolio         /portfolio.html      301
+/about             /about.html          301
+/contact           /contact.html        301
+/appointments      /appointments.html   301
+/book              /appointments.html   301
+/schedule          /appointments.html   301
