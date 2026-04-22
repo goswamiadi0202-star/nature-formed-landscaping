@@ -88,14 +88,18 @@
         <div class="reveal">
           <span class="label">Project Inquiry</span>
           <h2 style="margin-bottom: 2rem;">Request Your Free Quote</h2>
-          <!-- Netlify Forms: data-netlify + name + hidden form-name.
-               Submissions are captured by Netlify and emailed to NatureFormedCo@gmail.com
-               (notification configured in Netlify dashboard → Forms → Notifications).
-               The "subject" hidden field makes Gmail threading + inbox preview clean. -->
-          <form class="contact-form" name="nature-formed-contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" data-nf-contact action="/thanks.html">
-            <input type="hidden" name="form-name" value="nature-formed-contact" />
-            <input type="hidden" name="subject" value="New Quote Request — Nature Formed Website" />
-            <p style="display:none;"><label>Don't fill this out: <input name="bot-field" /></label></p>
+          <!-- Web3Forms — FREE unlimited form-to-email. No backend needed.
+               1. Jonathan: go to https://web3forms.com/
+               2. Enter NatureFormedCo@gmail.com — they email back an access key in 30 seconds
+               3. Replace REPLACE_WITH_WEB3FORMS_ACCESS_KEY below with the key
+               4. Done — every submission lands in his Gmail inbox -->
+          <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" data-nf-contact>
+            <input type="hidden" name="access_key" value="REPLACE_WITH_WEB3FORMS_ACCESS_KEY" />
+            <input type="hidden" name="subject" value="🌿 New Quote Request — Nature Formed Website" />
+            <input type="hidden" name="from_name" value="Nature Formed Website" />
+            <input type="hidden" name="redirect" value="https://natureformedlandscaping.com/thanks.html" />
+            <!-- Honeypot — bots fill this, real users don't -->
+            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
 
             <div class="contact-form__row">
               <div>
