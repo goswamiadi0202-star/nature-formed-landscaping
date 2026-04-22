@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Claude / preview
+.claude/
+/tmp/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Env
+.env
+.env.local
