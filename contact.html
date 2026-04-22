@@ -84,83 +84,24 @@
     <div class="container">
       <div class="contact-layout">
 
-        <!-- FORM -->
+        <!-- ACUITY SCHEDULER — all inquiries go through booking (one source of truth) -->
         <div class="reveal">
-          <span class="label">Project Inquiry</span>
-          <h2 style="margin-bottom: 2rem;">Request Your Free Quote</h2>
-          <!-- FormSubmit.co — COMPLETELY FREE, UNLIMITED, no account needed.
-               First submission ever: FormSubmit emails Jonathan a one-click "activate this endpoint"
-               confirmation. After that, every submission lands in NatureFormedCo@gmail.com forever.
-               Configure: change the email in the action URL below if he wants a different inbox. -->
-          <form class="contact-form" action="https://formsubmit.co/NatureFormedCo@gmail.com" method="POST" data-nf-contact>
-            <input type="hidden" name="_subject" value="🌿 New Quote Request — Nature Formed Website" />
-            <input type="hidden" name="_next" value="https://natureformedlandscaping.com/thanks.html" />
-            <input type="hidden" name="_captcha" value="true" />
-            <input type="hidden" name="_template" value="table" />
-            <!-- Honeypot — bots fill it, humans never see it -->
-            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+          <span class="label">— Private Consultation</span>
+          <h2 style="margin-bottom: 1rem;">Book a Walk-Through</h2>
+          <p style="color: var(--stone); margin-bottom: 2rem; font-size: 1.0625rem; line-height: 1.65;">Pick a time that works for you. We'll visit your property, walk through your vision, and follow up with a detailed proposal — no pressure, no high-pressure pitch.</p>
 
-            <div class="contact-form__row">
-              <div>
-                <label for="name">Full Name *</label>
-                <input id="name" name="name" type="text" required />
-              </div>
-              <div>
-                <label for="email">Email Address *</label>
-                <input id="email" name="email" type="email" required />
-              </div>
-            </div>
-
-            <div class="contact-form__row">
-              <div>
-                <label for="phone">Phone Number *</label>
-                <input id="phone" name="phone" type="tel" required />
-              </div>
-              <div>
-                <label for="address">Property Address</label>
-                <input id="address" name="address" type="text" />
-              </div>
-            </div>
-
-            <div>
-              <label for="service">Service Interested In *</label>
-              <select id="service" name="service" required>
-                <option value="">Select a service…</option>
-                <option>One-Time Cleanup / Routine Care</option>
-                <option>Landscape Design &amp; Planning</option>
-                <option>Patios, Pavers &amp; Travertine Hardscape</option>
-                <option>Tree &amp; Garden Care</option>
-                <option>Irrigation &amp; Sprinkler System</option>
-                <option>Sod &amp; Synthetic Grass Installation</option>
-                <option>Outdoor Lighting Design &amp; Repair</option>
-                <option>Pressure Washing</option>
-                <option>Junk Removal &amp; Site Clearing</option>
-                <option>Discreet Mode Maintenance</option>
-                <option>Custom / Estate Project</option>
-              </select>
-            </div>
-
-            <div>
-              <label for="message">Project Description *</label>
-              <textarea id="message" name="message" rows="5" required placeholder="Tell us about the space, your vision, and your timeline..."></textarea>
-            </div>
-
-            <div>
-              <label for="source">How did you hear about us?</label>
-              <select id="source" name="source">
-                <option value="">Select...</option>
-                <option>Google Search</option>
-                <option>Instagram</option>
-                <option>Referral from a friend</option>
-                <option>Nextdoor</option>
-                <option>Drive-by / Lawn Sign</option>
-                <option>Other</option>
-              </select>
-            </div>
-
-            <button type="submit" class="btn btn--dark" style="width: 100%; margin-top: 0.5rem;">Send Your Request</button>
-            <div class="contact-form__note">We respond to all inquiries within 24 hours.</div>
-          </form>
+          <!-- Replace the src URL with Nature Formed's Acuity Direct Link -->
+          <div style="background: var(--warm-white); border: 1px solid var(--sand); border-radius: var(--border-radius); overflow: hidden; box-shadow: 0 20px 40px -30px rgba(13,40,24,0.2);">
+            <iframe
+              src="https://app.acuityscheduling.com/schedule.php?owner=NATUREFORMED_OWNER_ID_HERE"
+              title="Schedule with Nature Formed Landscaping"
+              width="100%"
+              height="820"
+              frameborder="0"
+              loading="lazy"
+              style="display: block; border: 0;"></iframe>
+          </div>
+          <script src="https://embed.acuityscheduling.com/js/embed.js" async></script>
         </div>
 
         <!-- INFO CARDS -->
