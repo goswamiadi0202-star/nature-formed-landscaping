@@ -79,81 +79,77 @@
     </div>
   </section>
 
-  <!-- ========== QUICK REACH — 3-col info row ========== -->
-  <section class="reach-row">
+  <!-- ========== CONTACT CONTENT ========== -->
+  <main class="section--cream">
     <div class="container">
-      <div class="reach-grid">
-        <a href="tel:+16025172134" class="reach-card reveal">
-          <div class="reach-card__label">Call or Text</div>
-          <div class="reach-card__value">(602) 517-2134</div>
-          <div class="reach-card__sub">Mon–Sat · 9 AM – 5 PM</div>
-        </a>
-        <a href="mailto:NatureFormedCo@gmail.com" class="reach-card reveal" data-delay="1">
-          <div class="reach-card__label">Email</div>
-          <div class="reach-card__value">NatureFormedCo@gmail.com</div>
-          <div class="reach-card__sub">Reply within 24 hours</div>
-        </a>
-        <a href="https://www.instagram.com/natureformed_" target="_blank" rel="noopener" class="reach-card reveal" data-delay="2">
-          <div class="reach-card__label">Follow</div>
-          <div class="reach-card__value">@natureformed_</div>
-          <div class="reach-card__sub">Daily project updates</div>
-        </a>
-      </div>
-    </div>
-  </section>
+      <div class="contact-layout">
 
-  <!-- ========== BOOKING — full-width centered Acuity scheduler ========== -->
-  <main class="booking-main">
-    <div class="container container--narrow">
-      <div class="booking-header reveal">
-        <span class="label">— Private Consultation</span>
-        <h2>Book a Walk-Through,<br/><em style="font-style:italic;color:var(--forest);">On Your Schedule.</em></h2>
-        <p>Pick a time that works for you. We'll visit your property, walk through your vision, and follow up with a detailed proposal — no pressure, no high-pressure pitch.</p>
-      </div>
+        <!-- LEFT: Acuity Scheduler + fallback -->
+        <div class="reveal">
+          <span class="label">— Private Consultation</span>
+          <h2 style="margin-bottom: 1rem;">Book a Walk-Through</h2>
+          <p style="color: var(--stone); margin-bottom: 2rem; font-size: 1.0625rem; line-height: 1.65;">Pick a time that works for you. We'll visit your property, walk through your vision, and follow up with a detailed proposal — no pressure, no high-pressure pitch.</p>
 
-      <div class="booking-frame reveal">
-        <iframe
-          src="https://NatureFormedLandscaping.as.me/"
-          title="Schedule with Nature Formed Landscaping"
-          width="100%"
-          height="820"
-          frameborder="0"
-          loading="lazy"
-          style="display:block; border:0; min-height:820px;"></iframe>
-      </div>
-      <script src="https://embed.acuityscheduling.com/js/embed.js" async></script>
+          <div style="background: var(--warm-white); border: 1px solid var(--sand); border-radius: var(--border-radius); overflow: hidden; box-shadow: 0 20px 40px -30px rgba(13,40,24,0.2); min-height: 820px;">
+            <iframe
+              src="https://NatureFormedLandscaping.as.me/"
+              title="Schedule with Nature Formed Landscaping"
+              width="100%"
+              height="820"
+              frameborder="0"
+              loading="lazy"
+              style="display: block; border: 0; min-height: 820px;"></iframe>
+          </div>
+          <script src="https://embed.acuityscheduling.com/js/embed.js" async></script>
 
-      <div class="booking-fallback reveal">
-        <a href="https://NatureFormedLandscaping.as.me/" target="_blank" rel="noopener" class="btn btn--dark">
-          Open Full Scheduler ↗
-        </a>
-        <p>Scheduler not loading? Open it in a new tab.</p>
+          <div style="text-align:center; margin-top:1.25rem;">
+            <a href="https://NatureFormedLandscaping.as.me/" target="_blank" rel="noopener" class="btn btn--dark">
+              Open Full Scheduler ↗
+            </a>
+            <p style="color:var(--stone); font-size:0.875rem; margin-top:0.75rem; font-style:italic;">
+              Scheduler not loading? Open it in a new tab.
+            </p>
+          </div>
+        </div>
+
+        <!-- RIGHT: Info cards -->
+        <div class="contact-info reveal" data-delay="1">
+          <div class="contact-card">
+            <div class="contact-card__label">Phone</div>
+            <div class="contact-card__value"><a href="tel:+16025172134">(602) 517-2134</a></div>
+            <div class="contact-card__value" style="font-size: 1.125rem; margin-top: 0.25rem;"><a href="tel:+16232197121">(623) 219-7121</a></div>
+            <div class="contact-card__sub">Call or text either number — we respond fast.</div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card__label">Email</div>
+            <div class="contact-card__value"><a href="mailto:NatureFormedCo@gmail.com">NatureFormedCo@gmail.com</a></div>
+            <div class="contact-card__sub">Best for detailed project inquiries.</div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card__label">Hours</div>
+            <div class="contact-card__value" style="font-size: 1.15rem;">Monday – Saturday<br/>9 AM – 5 PM</div>
+            <div class="contact-card__sub">Sunday: Closed</div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card__label">Address</div>
+            <div class="contact-card__value" style="font-size: 1.15rem;">1701 E Meadowbrook Ave<br/>Phoenix, AZ 85016</div>
+            <div class="contact-card__sub">Stop by or send mail here.</div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card__label">Service Area</div>
+            <div class="contact-card__value" style="font-size: 1.15rem;">Scottsdale &amp; Phoenix Metro</div>
+            <div class="contact-card__sub">Silverleaf · Paradise Valley · DC Ranch · Arcadia · Camelback Corridor · Phoenix · Tempe · Mesa · Gilbert</div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card__label">Follow</div>
+            <div class="contact-card__value"><a href="https://www.instagram.com/natureformed_" target="_blank" rel="noopener">@natureformed_</a></div>
+            <div class="contact-card__sub">Daily project updates &amp; behind-the-scenes</div>
+          </div>
+        </div>
+
       </div>
     </div>
   </main>
-
-  <!-- ========== ADDRESS + HOURS + SERVICE AREA ========== -->
-  <section class="detail-row">
-    <div class="container">
-      <div class="detail-grid">
-        <div class="detail-card reveal">
-          <div class="detail-card__label">Address</div>
-          <div class="detail-card__value">1701 E Meadowbrook Ave<br/>Phoenix, AZ 85016</div>
-          <div class="detail-card__sub">Stop by or send mail here.</div>
-        </div>
-        <div class="detail-card reveal" data-delay="1">
-          <div class="detail-card__label">Hours</div>
-          <div class="detail-card__value">Monday – Saturday<br/>9 AM – 5 PM</div>
-          <div class="detail-card__sub">Sunday: Closed</div>
-        </div>
-        <div class="detail-card reveal" data-delay="2">
-          <div class="detail-card__label">Service Area</div>
-          <div class="detail-card__value">Scottsdale &amp; the Valley</div>
-          <div class="detail-card__sub">Silverleaf · Paradise Valley · DC Ranch · Troon · Desert Mountain · Arcadia · Camelback Corridor · Phoenix · Tempe · Gilbert · Mesa · Chandler · Glendale · Peoria</div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ========== MAP SECTION ========== -->
   <section class="map-section">
