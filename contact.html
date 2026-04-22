@@ -88,9 +88,13 @@
         <div class="reveal">
           <span class="label">Project Inquiry</span>
           <h2 style="margin-bottom: 2rem;">Request Your Free Quote</h2>
-          <!-- Netlify Forms: data-netlify + name + hidden form-name -->
-          <form class="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" data-nf-contact action="/thanks.html">
-            <input type="hidden" name="form-name" value="contact" />
+          <!-- Netlify Forms: data-netlify + name + hidden form-name.
+               Submissions are captured by Netlify and emailed to NatureFormedCo@gmail.com
+               (notification configured in Netlify dashboard → Forms → Notifications).
+               The "subject" hidden field makes Gmail threading + inbox preview clean. -->
+          <form class="contact-form" name="nature-formed-contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" data-nf-contact action="/thanks.html">
+            <input type="hidden" name="form-name" value="nature-formed-contact" />
+            <input type="hidden" name="subject" value="New Quote Request — Nature Formed Website" />
             <p style="display:none;"><label>Don't fill this out: <input name="bot-field" /></label></p>
 
             <div class="contact-form__row">
@@ -118,16 +122,18 @@
             <div>
               <label for="service">Service Interested In *</label>
               <select id="service" name="service" required>
-                <option value="">Select a service...</option>
+                <option value="">Select a service…</option>
+                <option>One-Time Cleanup / Routine Care</option>
                 <option>Landscape Design &amp; Planning</option>
-                <option>Patios, Pavers &amp; Hardscaping</option>
-                <option>Sod &amp; Synthetic Turf Installation</option>
-                <option>Irrigation &amp; Sprinkler Systems</option>
-                <option>Outdoor Lighting Design</option>
+                <option>Patios, Pavers &amp; Travertine Hardscape</option>
                 <option>Tree &amp; Garden Care</option>
-                <option>Maintenance &amp; Cleanups</option>
+                <option>Irrigation &amp; Sprinkler System</option>
+                <option>Sod &amp; Synthetic Grass Installation</option>
+                <option>Outdoor Lighting Design &amp; Repair</option>
                 <option>Pressure Washing</option>
-                <option>Other / Custom Project</option>
+                <option>Junk Removal &amp; Site Clearing</option>
+                <option>Discreet Mode Maintenance</option>
+                <option>Custom / Estate Project</option>
               </select>
             </div>
 
