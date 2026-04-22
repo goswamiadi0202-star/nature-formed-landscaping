@@ -1434,6 +1434,61 @@ section.section--warm { background: var(--warm-white); }
   font-size: 0.7rem;
 }
 
+/* ---------- NEIGHBORHOODS WE SERVE ---------- */
+.neighborhoods {
+  background: var(--cream);
+  padding: var(--section-padding-y) var(--section-padding-x);
+}
+.neighborhoods .container { max-width: 1200px; }
+.neighborhoods-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(2rem, 4vw, 4rem);
+  margin-top: 2rem;
+}
+.neighborhoods-col h3 {
+  font-family: "Lora", Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--forest);
+  letter-spacing: -0.01em;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--sand);
+}
+.neighborhoods-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.neighborhoods-col li {
+  padding: 0.55rem 0;
+  color: var(--charcoal);
+  font-size: 1rem;
+  border-bottom: 1px dotted var(--sand);
+  position: relative;
+  padding-left: 1rem;
+}
+.neighborhoods-col li::before {
+  content: "◆";
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 0.5rem;
+  top: 0.85rem;
+}
+.neighborhoods-col li:last-child { border-bottom: none; }
+.neighborhoods__note {
+  text-align: center;
+  margin-top: 3rem;
+  font-style: italic;
+  color: var(--stone);
+}
+.neighborhoods__note a { color: var(--forest); border-bottom: 1px solid var(--gold); }
+@media (max-width: 768px) {
+  .neighborhoods-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+
 /* ---------- DISCREET MODE — FEATURED HOMEPAGE SECTION ---------- */
 .discreet-feature {
   position: relative;
