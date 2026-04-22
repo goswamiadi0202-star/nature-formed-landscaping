@@ -1,3 +1,7 @@
+# Force www (fixes Seobility canonical-mismatch warning by redirecting non-www → www)
+http://natureformedlandscaping.com/*   https://www.natureformedlandscaping.com/:splat   301!
+https://natureformedlandscaping.com/*  https://www.natureformedlandscaping.com/:splat   301!
+
 /home              /                    301
 /services          /services.html       301
 /portfolio         /portfolio.html      301
