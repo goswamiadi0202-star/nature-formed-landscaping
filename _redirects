@@ -10,3 +10,13 @@
 /appointments      /appointments.html   301
 /book              /appointments.html   301
 /schedule          /appointments.html   301
+
+# Neighborhood landing pages — friendly URLs
+/silverleaf                    /silverleaf-landscaping.html        301
+/silverleaf-scottsdale         /silverleaf-landscaping.html        301
+/paradise-valley               /paradise-valley-landscaping.html   301
+/pv                            /paradise-valley-landscaping.html   301
+/dc-ranch                      /dc-ranch-landscaping.html          301
+/troon                         /troon-north-landscaping.html       301
+/troon-north                   /troon-north-landscaping.html       301
+/desert-mountain               /desert-mountain-landscaping.html   301
