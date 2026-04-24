@@ -4,13 +4,24 @@
 
 /* ---------- RESET ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
 body { min-height: 100vh; overflow-x: hidden; }
 img, video { max-width: 100%; height: auto; display: block; }
 button { cursor: pointer; border: none; background: none; font: inherit; color: inherit; }
 a { color: inherit; text-decoration: none; }
 ul { list-style: none; }
 input, textarea, select, button { font: inherit; }
+
+/* iOS Safari: remove grey tap flash on interactive elements */
+a, button, [role="button"], input, label, select, summary, textarea {
+  -webkit-tap-highlight-color: transparent;
+}
 
 /* ---------- TOKENS ---------- */
 :root {
@@ -332,25 +343,26 @@ section.section--warm { background: var(--warm-white); }
 
 .nav__toggle {
   display: none;
-  width: 32px;
-  height: 24px;
+  width: 44px;
+  height: 44px;
+  padding: 10px 6px;
   position: relative;
   z-index: 110;
 }
 .nav__toggle span {
   position: absolute;
-  left: 0;
-  width: 100%;
+  left: 6px;
+  right: 6px;
   height: 1.5px;
   background: var(--warm-white);
   transition: transform 0.3s ease, opacity 0.3s ease, top 0.3s ease;
 }
-.nav__toggle span:nth-child(1) { top: 4px; }
-.nav__toggle span:nth-child(2) { top: 11px; }
-.nav__toggle span:nth-child(3) { top: 18px; }
-.nav__toggle.is-open span:nth-child(1) { top: 11px; transform: rotate(45deg); }
+.nav__toggle span:nth-child(1) { top: 14px; }
+.nav__toggle span:nth-child(2) { top: 21px; }
+.nav__toggle span:nth-child(3) { top: 28px; }
+.nav__toggle.is-open span:nth-child(1) { top: 21px; transform: rotate(45deg); }
 .nav__toggle.is-open span:nth-child(2) { opacity: 0; }
-.nav__toggle.is-open span:nth-child(3) { top: 11px; transform: rotate(-45deg); }
+.nav__toggle.is-open span:nth-child(3) { top: 21px; transform: rotate(-45deg); }
 
 /* ---------- HERO ---------- */
 .hero {
@@ -2491,9 +2503,16 @@ section.section--warm { background: var(--warm-white); }
 }
 
 @media (max-width: 480px) {
-  .btn { padding: 1rem 1.75rem; font-size: 0.875rem; width: 100%; }
+  .btn { padding: 1rem 1.75rem; font-size: 0.9375rem; width: 100%; min-height: 48px; }
   .hero__subtitle { font-size: 1rem; }
   .nav__wordmark { font-size: 0.8125rem; letter-spacing: 0.15em; }
+
+  /* iPhone readability bumps for small uppercase text */
+  .label { font-size: 0.8125rem; }
+  .footer__title { font-size: 0.875rem; }
+  .footer__mission { font-size: 0.9375rem; }
+  .footer__bottom { font-size: 0.875rem; }
+  .testimonial__meta { font-size: 0.875rem; }
 }
 
 /* ---------- SCROLL PROGRESS BAR ---------- */
