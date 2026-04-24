@@ -1,6 +1,6 @@
-# Force www (fixes Seobility canonical-mismatch warning by redirecting non-www → www)
-http://natureformedlandscaping.com/*   https://www.natureformedlandscaping.com/:splat   301!
-https://natureformedlandscaping.com/*  https://www.natureformedlandscaping.com/:splat   301!
+# Apex ↔ www canonicalization is handled by Netlify's primary-domain setting.
+# Do NOT add manual www-forcing rules here — they conflict with Netlify's
+# automatic alias redirect and produce ERR_TOO_MANY_REDIRECTS.
 
 /home              /                    301
 /services          /services.html       301
