@@ -32,19 +32,24 @@
   handleNavScroll();
 
   if (navToggle && navMenu) {
-    navToggle.addEventListener('click', () => {
-      const open = navMenu.classList.toggle('is-open');
+    // Portal the mobile menu to <body> so it escapes the nav's
+    // backdrop-filter containing block (which otherwise traps
+    // position:fixed children to the nav's bounding box).
+    if (navMenu.parentElement !== document.body) {
+      document.body.appendChild(navMenu);
+    }
+    const setMenu = (open) => {
+      navMenu.classList.toggle('is-open', open);
       navToggle.classList.toggle('is-open', open);
+      document.body.classList.toggle('menu-open', open);
       document.body.style.overflow = open ? 'hidden' : '';
       navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    };
+    navToggle.addEventListener('click', () => {
+      setMenu(!navMenu.classList.contains('is-open'));
     });
-    // Close on link tap
     navMenu.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        navMenu.classList.remove('is-open');
-        navToggle.classList.remove('is-open');
-        document.body.style.overflow = '';
-      });
+      a.addEventListener('click', () => setMenu(false));
     });
   }
 
@@ -64,22 +69,46 @@
     revealItems.forEach(el => el.classList.add('is-visible'));
   }
 
-  /* ---------- HERO: WORD-BY-WORD REVEAL ---------- */
+  /* ---------- HERO: WORD-BY-WORD REVEAL ----------
+     Preserves <br> and inline tags like <em>. Walks the DOM instead of
+     textContent-splitting (which flattens "Something<br>Beautiful" into
+     "SomethingBeautiful" and breaks responsive line wrapping). */
   const heroHeadlines = document.querySelectorAll('.hero__headline');
   heroHeadlines.forEach(h => {
     if (h.dataset.split === 'done') return;
-    const raw = h.textContent.trim();
+    const wordCounter = { n: 0 };
+    const wrapWords = (srcNode, destNode) => {
+      Array.from(srcNode.childNodes).forEach(node => {
+        if (node.nodeType === Node.TEXT_NODE) {
+          const words = node.textContent.split(/(\s+)/);
+          words.forEach(tok => {
+            if (!tok) return;
+            if (/^\s+$/.test(tok)) {
+              destNode.appendChild(document.createTextNode(' '));
+            } else {
+              const span = document.createElement('span');
+              span.className = 'word';
+              span.textContent = tok;
+              span.style.animationDelay = `${0.15 + wordCounter.n * 0.08}s`;
+              destNode.appendChild(span);
+              wordCounter.n++;
+            }
+          });
+        } else if (node.nodeType === Node.ELEMENT_NODE) {
+          if (node.tagName === 'BR') {
+            destNode.appendChild(document.createElement('br'));
+          } else {
+            const clone = node.cloneNode(false);
+            wrapWords(node, clone);
+            destNode.appendChild(clone);
+          }
+        }
+      });
+    };
+    const frag = document.createDocumentFragment();
+    wrapWords(h, frag);
     h.innerHTML = '';
-    const words = raw.split(/\s+/);
-    words.forEach((word, i) => {
-      const span = document.createElement('span');
-      span.className = 'word';
-      span.textContent = word;
-      span.style.animationDelay = `${0.15 + i * 0.08}s`;
-      h.appendChild(span);
-      // Insert a real space text node between words so inline-block spans don't collapse
-      if (i < words.length - 1) h.appendChild(document.createTextNode(' '));
-    });
+    h.appendChild(frag);
     h.dataset.split = 'done';
   });
 

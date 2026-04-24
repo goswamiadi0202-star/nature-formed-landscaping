@@ -427,7 +427,9 @@ section.section--warm { background: var(--warm-white); }
   letter-spacing: -0.02em;
   color: var(--warm-white);
   margin: 1.5rem 0 1.75rem;
-  white-space: pre-line;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  max-width: 100%;
   text-shadow: 0 2px 40px rgba(0,0,0,0.35);
 }
 .hero__headline::after {
@@ -2458,11 +2460,19 @@ section.section--warm { background: var(--warm-white); }
 @media (max-width: 768px) {
   .nav__menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
     background: var(--forest); flex-direction: column; align-items: center; justify-content: center;
-    gap: 2.5rem; padding: 2rem; z-index: 105; }
+    gap: 2.5rem; padding: 2rem; z-index: 9999; }
   .nav__menu.is-open { display: flex; }
   .nav__menu .nav__link { font-size: 1.25rem; letter-spacing: 0.2em; }
   .nav__menu .nav__cta { padding: 1rem 2rem; font-size: 0.9375rem; }
-  .nav__toggle { display: block; }
+  .nav__toggle { display: block; z-index: 10000; }
+
+  /* iOS Safari: iframes create their own compositing layer that can
+     paint on top of the nav overlay regardless of z-index. Hide them
+     when the menu is open so nothing bleeds through. */
+  body.menu-open iframe,
+  body.menu-open video,
+  body.menu-open .hero__bg,
+  body.menu-open .booking__frame-wrap { visibility: hidden; }
 
   .trust-strip__inner { grid-template-columns: 1fr 1fr; gap: 1.5rem 1rem; }
   .trust-stat:nth-child(2n)::after { display: none; }
