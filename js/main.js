@@ -32,12 +32,19 @@
   handleNavScroll();
 
   if (navToggle && navMenu) {
-    // Portal the mobile menu to <body> so it escapes the nav's
-    // backdrop-filter containing block (which otherwise traps
-    // position:fixed children to the nav's bounding box).
-    if (navMenu.parentElement !== document.body) {
-      document.body.appendChild(navMenu);
-    }
+    // Portal the mobile menu to <body> so the position:fixed overlay escapes
+    // the nav's backdrop-filter containing block. Only do this on mobile —
+    // on desktop the menu must stay inside .nav for the header layout to render.
+    const portalToBody = () => {
+      const isMobile = window.matchMedia('(max-width: 768px)').matches;
+      if (isMobile && navMenu.parentElement !== document.body) {
+        document.body.appendChild(navMenu);
+      } else if (!isMobile && navMenu.parentElement === document.body) {
+        nav.appendChild(navMenu);
+      }
+    };
+    portalToBody();
+    window.addEventListener('resize', portalToBody);
     const setMenu = (open) => {
       navMenu.classList.toggle('is-open', open);
       navToggle.classList.toggle('is-open', open);
