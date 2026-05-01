@@ -60,6 +60,30 @@
     });
   }
 
+  /* ---------- LAZY VIDEOS ----------
+     Below-the-fold videos use preload="none" + data-lazy-video to keep
+     the initial page load fast (autoplaying every video at once was
+     freezing the browser). Bump preload + .play() on viewport entry. */
+  if ('IntersectionObserver' in window) {
+    const vio = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const v = entry.target;
+          v.preload = 'auto';
+          v.load();
+          v.play().catch(() => {});
+          vio.unobserve(v);
+        }
+      });
+    }, { rootMargin: '200px' });
+    window.__lazyVideoObserver = vio;
+    document.querySelectorAll('video[data-lazy-video]').forEach(v => vio.observe(v));
+  } else {
+    document.querySelectorAll('video[data-lazy-video]').forEach(v => {
+      v.preload = 'auto'; v.play().catch(() => {});
+    });
+  }
+
   /* ---------- SCROLL REVEAL ---------- */
   const revealItems = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window && revealItems.length) {
@@ -259,7 +283,8 @@
     video.playsInline = true;
     video.setAttribute('playsinline', '');
     video.setAttribute('muted', '');
-    video.preload = 'metadata';
+    video.preload = 'none';
+    video.setAttribute('data-lazy-video', '');
     video.poster = src;
     video.setAttribute('aria-label', img.alt || '');
     const source = document.createElement('source');
@@ -268,6 +293,15 @@
     video.appendChild(source);
     img.parentNode.replaceChild(video, img);
   });
+
+  /* Re-observe lazy videos created by the img→video upgrade above. The
+     observer set up earlier only saw static markup; the dynamic videos
+     need to be added to its watch list. */
+  if (window.__lazyVideoObserver) {
+    document.querySelectorAll('video[data-lazy-video]').forEach(v => {
+      window.__lazyVideoObserver.observe(v);
+    });
+  }
 
   /* ---------- BEFORE/AFTER SLIDER ---------- */
   const sliders = document.querySelectorAll('[data-ba]');
