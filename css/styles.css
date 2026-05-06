@@ -11,6 +11,7 @@ html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
+html { overflow-x: hidden; }
 body { min-height: 100vh; overflow-x: hidden; }
 img, video { max-width: 100%; height: auto; display: block; }
 button { cursor: pointer; border: none; background: none; font: inherit; color: inherit; }
@@ -873,8 +874,11 @@ section.section--warm { background: var(--warm-white); }
   white-space: nowrap;
 }
 @media (max-width: 600px) {
-  .hero__meta { font-size: 0.65rem; letter-spacing: 0.15em; }
+  .hero__meta { font-size: 0.75rem; letter-spacing: 0.12em; }
   .hero__meta-right { display: none; }
+}
+@media (max-width: 360px) {
+  .hero__meta-left { white-space: normal; flex: 1 1 auto; min-width: 0; }
 }
 
 .hero__mast {
@@ -1416,6 +1420,18 @@ section.section--warm { background: var(--warm-white); }
   gap: 1rem;
   font-size: 0.8125rem;
   color: rgba(255,255,255,0.5);
+}
+
+.footer__credit {
+  max-width: var(--container-max);
+  margin: 1rem auto 0;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
 }
 
 /* ---------- SERVICES PAGE — DETAIL BLOCKS ---------- */
@@ -2547,6 +2563,17 @@ section.section--warm { background: var(--warm-white); }
   .footer__mission { font-size: 0.9375rem; }
   .footer__bottom { font-size: 0.875rem; }
   .testimonial__meta { font-size: 0.875rem; }
+  .service-card__tag { font-size: 0.75rem; letter-spacing: 0.14em; }
+  .discreet-feature__tag { font-size: 0.75rem; letter-spacing: 0.18em; padding: 0.55rem 1.1rem; }
+  .ba-slider__tag { font-size: 0.75rem; letter-spacing: 0.16em; padding: 0.45rem 0.85rem; }
+  .project-card__label,
+  .portfolio-card__cat,
+  .contact-card__label,
+  .discreet__badge { font-size: 0.75rem; letter-spacing: 0.14em; }
+
+  /* Bigger tap targets for footer nav links */
+  .footer__list li { margin-bottom: 0.25rem; }
+  .footer__list a { padding: 0.5rem 0; font-size: 1rem; }
 }
 
 /* ---------- SCROLL PROGRESS BAR ---------- */
