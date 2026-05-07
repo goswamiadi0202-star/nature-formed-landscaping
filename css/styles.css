@@ -1434,6 +1434,89 @@ section.section--warm { background: var(--warm-white); }
   color: rgba(255,255,255,0.4);
 }
 
+/* Hide ROC# placeholder until license number is provided.
+   Remove this rule once .footer__bottom > div:nth-child(2) holds the real ROC#. */
+.footer__bottom > div:nth-child(2) { display: none; }
+
+/* ---------- CONTACT FORM ---------- */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background: var(--warm-white);
+  border: 1px solid var(--sand);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: 0 20px 40px -30px rgba(13,40,24,0.18);
+}
+.contact-form__hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.contact-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+.contact-form__field { display: flex; flex-direction: column; gap: 0.4rem; }
+.contact-form__label {
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--forest);
+  font-weight: 700;
+}
+.contact-form__req { color: var(--gold); margin-left: 0.15em; }
+.contact-form__input {
+  font: inherit;
+  color: var(--forest);
+  background: #fff;
+  border: 1px solid var(--sand);
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+  font-size: 1rem;
+  line-height: 1.4;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  min-height: 48px;
+}
+.contact-form__input:focus {
+  outline: none;
+  border-color: var(--sage);
+  box-shadow: 0 0 0 3px rgba(107,143,94,0.18);
+}
+.contact-form__textarea { resize: vertical; min-height: 120px; line-height: 1.55; }
+select.contact-form__input {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'><path d='M1 1L6 6L11 1' stroke='%230D2818' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+.contact-form__submit { margin-top: 0.5rem; align-self: flex-start; }
+.contact-form__note { color: var(--stone); font-size: 0.8125rem; margin-top: 0.25rem; font-style: italic; }
+.contact-form__divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 2.75rem 0 1.5rem;
+  color: var(--stone);
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  font-weight: 700;
+}
+.contact-form__divider::before,
+.contact-form__divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--sand);
+}
+
+@media (max-width: 600px) {
+  .contact-form { padding: 1.5rem; }
+  .contact-form__row { grid-template-columns: 1fr; gap: 1.25rem; }
+  .contact-form__submit { width: 100%; align-self: stretch; }
+}
+
 /* ---------- SERVICES PAGE — DETAIL BLOCKS ---------- */
 .service-block {
   padding: calc(var(--section-padding-y) * 0.65) 0;

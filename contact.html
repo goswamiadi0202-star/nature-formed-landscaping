@@ -74,7 +74,7 @@
     <div class="hero__overlay"></div>
     <div class="hero__content">
       <span class="label">Private Consultation</span>
-      <h1 class="hero__headline">Let's Build Something<br/>Beautiful Together.</h1>
+      <h1 class="hero__headline">Let's Build Something <br/>Beautiful Together.</h1>
       <p class="hero__subtitle">Bespoke landscape consultations for Scottsdale, Paradise Valley, Silverleaf &amp; the luxury Valley. We'll walk your property, listen to your vision, and reply within 24 hours.</p>
     </div>
   </section>
@@ -84,8 +84,79 @@
     <div class="container">
       <div class="contact-layout">
 
-        <!-- LEFT: Acuity Scheduler + fallback -->
+        <!-- LEFT: Contact form (primary) + Acuity Scheduler (secondary) -->
         <div class="reveal">
+          <span class="label">— Send a Message</span>
+          <h2 style="margin-bottom: 1rem;">Tell Us About Your Project</h2>
+          <p style="color: var(--stone); margin-bottom: 2rem; font-size: 1.0625rem; line-height: 1.65;">A few details and we'll be in touch within 24 hours. Prefer to schedule directly? Use the calendar below.</p>
+
+          <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
+            <input type="hidden" name="form-name" value="contact" />
+            <p class="contact-form__hp" aria-hidden="true"><label>Don't fill this out: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+
+            <div class="contact-form__row">
+              <div class="contact-form__field">
+                <label class="contact-form__label" for="cf-name">Name <span class="contact-form__req" aria-hidden="true">*</span></label>
+                <input class="contact-form__input" type="text" id="cf-name" name="name" required autocomplete="name" />
+              </div>
+              <div class="contact-form__field">
+                <label class="contact-form__label" for="cf-phone">Phone</label>
+                <input class="contact-form__input" type="tel" id="cf-phone" name="phone" autocomplete="tel" placeholder="(602) 555-0100" />
+              </div>
+            </div>
+
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="cf-email">Email <span class="contact-form__req" aria-hidden="true">*</span></label>
+              <input class="contact-form__input" type="email" id="cf-email" name="email" required autocomplete="email" />
+            </div>
+
+            <div class="contact-form__row">
+              <div class="contact-form__field">
+                <label class="contact-form__label" for="cf-neighborhood">Neighborhood</label>
+                <select class="contact-form__input" id="cf-neighborhood" name="neighborhood">
+                  <option value="">Select…</option>
+                  <option>Silverleaf at DC Ranch</option>
+                  <option>DC Ranch</option>
+                  <option>Paradise Valley</option>
+                  <option>Troon North</option>
+                  <option>Desert Mountain</option>
+                  <option>Arcadia</option>
+                  <option>Camelback Corridor</option>
+                  <option>Scottsdale (other)</option>
+                  <option>Phoenix</option>
+                  <option>Tempe / Mesa / Gilbert / Chandler</option>
+                  <option>Other Valley</option>
+                </select>
+              </div>
+              <div class="contact-form__field">
+                <label class="contact-form__label" for="cf-project">Project type</label>
+                <select class="contact-form__input" id="cf-project" name="project_type">
+                  <option value="">Select…</option>
+                  <option>Full backyard redesign</option>
+                  <option>Hardscape (pavers, travertine, patio)</option>
+                  <option>Landscape design &amp; planning</option>
+                  <option>Discreet maintenance (Discreet Mode)</option>
+                  <option>Routine maintenance &amp; cleanups</option>
+                  <option>Irrigation / sprinkler</option>
+                  <option>Outdoor lighting</option>
+                  <option>Sod / synthetic turf</option>
+                  <option>Tree &amp; garden care</option>
+                  <option>Other / not sure yet</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="cf-message">Tell us about your yard</label>
+              <textarea class="contact-form__input contact-form__textarea" id="cf-message" name="message" rows="5" placeholder="Square footage, what you're hoping to change, timeline, budget range — whatever's helpful."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary contact-form__submit">Send Inquiry</button>
+            <p class="contact-form__note">We reply within 24 hours, Mon–Sat. Your info stays private.</p>
+          </form>
+
+          <div class="contact-form__divider" aria-hidden="true"><span>OR BOOK DIRECTLY</span></div>
+
           <span class="label">— Private Consultation</span>
           <h2 style="margin-bottom: 1rem;">Book a Walk-Through</h2>
           <p style="color: var(--stone); margin-bottom: 2rem; font-size: 1.0625rem; line-height: 1.65;">Pick a time that works for you. We'll visit your property, walk through your vision, and follow up with a detailed proposal — no pressure, no high-pressure pitch.</p>
@@ -175,7 +246,7 @@
             <span class="faq-item__icon" aria-hidden="true"></span>
           </button>
           <div class="faq-item__panel">
-            <div class="faq-item__content">Simply fill out the form above or give us a call at (623) 219-7121. We'll schedule a free consultation to visit your property, discuss your vision, and provide a detailed estimate.</div>
+            <div class="faq-item__content">Send us a message using the form above, book a walk-through directly with the scheduler, or call (623) 219-7121. We'll visit your property, discuss your vision, and provide a detailed estimate — no pressure.</div>
           </div>
         </div>
         <div class="faq-item reveal">
