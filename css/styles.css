@@ -954,16 +954,6 @@ section.section--warm { background: var(--warm-white); }
   .hero__meta { grid-column: 1 / -1; }
   .hero__mast { grid-column: 1; grid-row: 2; }
   .hero__panel { grid-column: 2; grid-row: 2; align-self: end; border-top: none; margin-top: 0; padding-top: 0; }
-  .hero__panel::before {
-    content: "Nº 01";
-    display: block;
-    font-family: "Lora", Georgia, serif;
-    font-style: italic;
-    color: var(--gold);
-    font-size: 1.125rem;
-    margin-bottom: 0.75rem;
-    letter-spacing: 0.1em;
-  }
 }
 
 /* ---------- EDITORIAL STATEMENT ---------- */
