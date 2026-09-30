@@ -29,4 +29,13 @@
     # via etag when the file content changes (e.g., re-cropping or replacing a hero).
     Cache-Control = "public, max-age=86400, must-revalidate"
 
+# Serve the business card with the vCard mime type so iOS/Android
+# prompt the user to add Nature Formed to their contacts on tap.
+[[headers]]
+  for = "/nature-formed.vcf"
+  [headers.values]
+    Content-Type = "text/vcard; charset=utf-8"
+    Content-Disposition = "attachment; filename=\"Nature Formed Landscaping.vcf\""
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
 # Path redirects live in the `_redirects` file (single source of truth).
